@@ -19,6 +19,7 @@ function prevSlide() {
 }
 
 function updateCarousel() {
+    console.log("hi");
   const carousel = document.querySelector('.carousel');
   const newTransformValue = -currentSlide * 100 + '%';
   carousel.style.transform = 'translateX(' + newTransformValue + ')';

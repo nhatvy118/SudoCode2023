@@ -105,27 +105,37 @@ html, body {
     padding: 0;
   }
   
-
+  
   .carousel-container {
+    position: relative;
     width: 80%;
+    max-height: 50vh;
     margin: auto;
     overflow: hidden;
-    margin-top: 20px; /* Add margin at the top */
+    margin-top: 20px; /* Add margin to the top */
   }
   
   .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    max-height: calc(33vh - 40px); /* Set maximum height to less than one third of the screen height */
+    max-height: 50vh; 
   }
   
   .carousel-item {
+    display: flex;
+    
     min-width: 100%;
     box-sizing: border-box;
+    margin: 0 auto;
   }
   
+  .carousel-item p{
+    padding: 30px;
+  }
   .carousel-item img {
-    height: auto;
+    width: auto;
+    max-height: 100%; 
+  
   }
   
   .arrow {
@@ -143,4 +153,5 @@ html, body {
   .next {
     right: 10px;
   }
+  
   
