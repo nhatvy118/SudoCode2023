@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Knight</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Library</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <div class="container">
         <div class="logo">
-            <img src="knight-logo.png" alt="Knight Logo">
+            <img src="./scr/logo.png" alt="Logo" width="200" height="200">
         </div>
+<<<<<<< HEAD
         <nav>
             <ul>
                 <li><a href="#">Features</a></li>
@@ -28,5 +29,91 @@
         <img src="https://picsum.photos/200/300?t=4" alt="" class="pic">
         <img src="https://picsum.photos/200/300?t=5" alt="" class="pic">
       </div>
+=======
+        <ul class = "nav-component">
+            <li>
+              <div class="browse-component hear-dropdown">
+                <detail>
+                    <summary>
+                      Browse 
+                    <span class = "shift">Menu</span>
+                    <img class="down-arrow" aria-hidden="true" src="./src/down.png" alt="" role="presentation">
+                    </summary>
+                    <div class="dropdown-compenent">
+                          <ul class ="dropdown-menu">
+                            <li>
+                              <a href="/subjects" data-ol-link-track="MainNav|Subjects">
+                                Subjects
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/trending" data-ol-link-track="MainNav|Trending">
+                                Trending
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/explore" data-ol-link-track="MainNav|Explore">
+                                Library Explorer
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/lists" data-ol-link-track="MainNav|Lists">
+                                Lists
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/collections" data-ol-link-track="MainNav|Collections">
+                                Collections
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/k-12" data-ol-link-track="MainNav|K12Library">
+                                K-12 Student Library
+                              </a>
+                            </li>
+                            <li>
+                              <a href="/random" data-ol-link-track="MainNav|RandomBook">
+                                Random Book
+                              </a>
+                            </li>
+                          </ul>
+                    </div>
+                </detail>
+              </div>
+            </li>
+        </ul>
+        <div class="search-component">
+            <div class="search-bar-component">
+              <div class="search-bar">
+                <div class="search-faucet">
+                  <label class="search-faucet selector">
+                    <span aria-hidden="true" class="search-facet-value">All</span>
+                    <select aria-label="Search by">
+                      <option value="all">All</option>
+                      <option value="title">Title</option>
+                      <option value="author">Author</option>
+                      <option value="text">Text</option>
+                      <option value="subject">Subject</option>
+                      <option value="lists">Lists</option>
+                      <option value="advanced">Advanced</option>
+                    </select>
+                  </label>
+                </div>
+                <form class="search-bar-input in-collapsible-mode" action="" method="get">
+                  <input type="text" name="q" placeholder="Search" aria-label="Search" autocomplete="off">
+                </form>
+                <div class="search-dropdown">
+                  <ul class="search-results"></ul>
+                </div>
+              </div>
+            </div>
+            <ul class="auth-component">
+              <li class="hide-me">
+                <a class="btn" href="">Log In</a></li>
+              <li><a class="btnprimary" href="">Sign Up</a></li>
+            </ul>    
+        </div>
+    </div>
+>>>>>>> f3d2a0994827e5090cc5e710663747b96e446613
 </body>
 </html>
