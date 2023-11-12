@@ -41,7 +41,7 @@ html, body {
     padding: 0;
   }
   
-  .pic-ctn {
+ /* .pic-ctn {
     width: 100vw;
     height: 200px;
   }
@@ -98,3 +98,49 @@ html, body {
   img:nth-child(5) {
     animation-delay: 8s;
   }
+*/
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .carousel-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px; /* Add margin at the top */
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    max-height: calc(33vh - 40px); /* Set maximum height to less than one third of the screen height */
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .carousel-item img {
+    height: auto;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
