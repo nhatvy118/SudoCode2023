@@ -112,32 +112,32 @@ html, body {
     max-height: 50vh;
     margin: auto;
     overflow: hidden;
-    margin-top: 20px; /* Add margin to the top */
+    margin-top: 20px; 
   }
   
   .carousel {
+    margin: 10px 40px;
     display: flex;
     transition: transform 0.5s ease-in-out;
     max-height: 50vh; 
   }
   
   .carousel-item {
-    display: flex;
-    
     min-width: 100%;
     box-sizing: border-box;
-    margin: 0 auto;
+    display: flex; 
   }
   
-  .carousel-item p{
-    padding: 30px;
-  }
-  .carousel-item img {
+  .cover-image {
     width: auto;
     max-height: 100%; 
-  
   }
   
+  .book-info {
+    flex: 1; 
+    padding: 20px; 
+  }
+
   .arrow {
     position: absolute;
     top: 50%;
