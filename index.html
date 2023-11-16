@@ -1,162 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little Library</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Library</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="nav-container">
-        <div class="logo">
-            <img src="./scr/logo.png" alt="Logo" width="200" height="200">
-        </div>
-        <ul class = "nav-component">
-            <li>
-              <div class="browse-component hear-dropdown">
-                <detail>
-                    <summary>
-                      Browse 
-                    <span class = "shift">Menu</span>
-                    <img class="down-arrow" aria-hidden="true" src="./src/down.png" alt="" role="presentation">
-                    </summary>
-                    <div class="dropdown-compenent">
-                          <ul class ="dropdown-menu">
-                            <li>
-                              <a href="/subjects" data-ol-link-track="MainNav|Subjects">
-                                Subjects
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/trending" data-ol-link-track="MainNav|Trending">
-                                Trending
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/explore" data-ol-link-track="MainNav|Explore">
-                                Library Explorer
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/lists" data-ol-link-track="MainNav|Lists">
-                                Lists
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/collections" data-ol-link-track="MainNav|Collections">
-                                Collections
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/k-12" data-ol-link-track="MainNav|K12Library">
-                                K-12 Student Library
-                              </a>
-                            </li>
-                            <li>
-                              <a href="/random" data-ol-link-track="MainNav|RandomBook">
-                                Random Book
-                              </a>
-                            </li>
-                          </ul>
-                    </div>
-                </detail>
+      <div class="logo">
+        <img src="./scr/logo.png" alt="Logo" width="200" height="200" />
+      </div>
+      <ul class="nav-component">
+        <li>
+          <div class="browse-component hear-dropdown">
+            <details>
+              <summary>
+                Browse
+                <span class="shift"></span>
+                <img
+                  class="down-arrow"
+                  aria-hidden="true"
+                  src="./src/down.png"
+                  alt=""
+                  role="presentation"
+                />
+              </summary>
+              <div class="dropdown-compenent">
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="/subjects" data-ol-link-track="MainNav|Subjects">
+                      Subjects
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/trending" data-ol-link-track="MainNav|Trending">
+                      Trending
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/explore" data-ol-link-track="MainNav|Explore">
+                      Library Explorer
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/lists" data-ol-link-track="MainNav|Lists">
+                      Lists
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/collections"
+                      data-ol-link-track="MainNav|Collections"
+                    >
+                      Collections
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/k-12" data-ol-link-track="MainNav|K12Library">
+                      K-12 Student Library
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/random" data-ol-link-track="MainNav|RandomBook">
+                      Random Book
+                    </a>
+                  </li>
+                </ul>
               </div>
-            </li>
+            </details>
+          </div>
+        </li>
+      </ul>
+      <div class="search-component">
+        <div class="search-bar-component">
+          <div class="search-bar">
+            <div class="search-faucet">
+              <label class="search-faucet selector">
+                <span aria-hidden="true" class="search-facet-value"></span>
+                <select aria-label="Search by">
+                  <option value="all">All</option>
+                  <option value="title">Title</option>
+                  <option value="author">Author</option>
+                  <option value="text">Text</option>
+                  <option value="subject">Subject</option>
+                  <option value="lists">Lists</option>
+                  <option value="advanced">Advanced</option>
+                </select>
+              </label>
+            </div>
+            <form
+              class="search-bar-input in-collapsible-mode"
+              action=""
+              method="get"
+            >
+              <input
+                type="text"
+                name="q"
+                placeholder="Search"
+                aria-label="Search"
+                autocomplete="off"
+              />
+            </form>
+            <div class="search-dropdown">
+              <ul class="search-results"></ul>
+            </div>
+          </div>
+        </div>
+        <ul class="auth-component">
+          <li class="hide-me">
+            <a class="btn" href="">Log In</a>
+          </li>
+          <li><a class="btnprimary" href="">Sign Up</a></li>
         </ul>
-        <div class="search-component">
-            <div class="search-bar-component">
-              <div class="search-bar">
-                <div class="search-faucet">
-                  <label class="search-faucet selector">
-                    <span aria-hidden="true" class="search-facet-value">All</span>
-                    <select aria-label="Search by">
-                      <option value="all">All</option>
-                      <option value="title">Title</option>
-                      <option value="author">Author</option>
-                      <option value="text">Text</option>
-                      <option value="subject">Subject</option>
-                      <option value="lists">Lists</option>
-                      <option value="advanced">Advanced</option>
-                    </select>
-                  </label>
-                </div>
-                <form class="search-bar-input in-collapsible-mode" action="" method="get">
-                  <input type="text" name="q" placeholder="Search" aria-label="Search" autocomplete="off">
-                </form>
-                <div class="search-dropdown">
-                  <ul class="search-results"></ul>
-                </div>
+      </div>
+    </div>
+
+    <!-- Trending Books Carousel Section -->
+    <section class="trending-books">
+      <div class="container">
+        <h2>Trending Books</h2>
+        <!-- Trending books carousel -->
+        <div class="carousel-container">
+          <div class="carousel">
+            <!-- Featured Book 1 -->
+            <div class="carousel-item">
+              <img
+                src="https://dynamic.indigoimages.ca/books/9780811232432.jpg?scaleup=true&width=600&quality=85&lang=en"
+                alt="No Longer Human"
+                class="cover-image"
+              />
+              <div class="book-info">
+                <h3>No Longer Human - Osamu Dazai</h3>
+                <p>
+                  It tells the story of a troubled man incapable of revealing
+                  his true self to others, and who, instead, maintains a facade
+                  of hollow jocularity, later turning to a life of alcoholism
+                  and drug abuse before his final disappearance. The original
+                  title translates as "Disqualified as a human being" or "A
+                  failed human".
+                </p>
               </div>
             </div>
-            <ul class="auth-component">
-              <li class="hide-me">
-                <a class="btn" href="">Log In</a></li>
-              <li><a class="btnprimary" href="">Sign Up</a></li>
-            </ul>    
-        </div>
-    </div>
+            <!-- Featured Book 2 -->
+            <div class="carousel-item">
+              <img
+                src="https://cdn-amz.woka.io/images/I/71H52+sSb4L.jpg"
+                alt=""
+                class="cover-image"
+              />
+              <div class="book-info">
+                <h3>The Book Thief - Markus Zusak</h3>
+                <p>
+                  The Book Thief is a historical fiction novel by the Australian
+                  author Markus Zusak, set in Nazi Germany during World War II.
+                  Published in 2006, The Book Thief became an international
+                  bestseller and was translated into 63 languages and sold 17
+                  million copies. It was adapted into the 2013 feature film, The
+                  Book Thief.
+                </p>
+              </div>
+            </div>
+            <!-- Featured Book 3 -->
+            <div class="carousel-item">
+              <img
+                src="https://images.penguinrandomhouse.com/cover/9780735218246"
+                alt=""
+              />
+            </div>
+          </div>
 
-<!-- Trending Books Carousel Section -->
-<section class="trending-books">
-  <div class="container">
-    <h2>Trending Books</h2>
-    <!-- Trending books carousel -->
-    <div class="carousel-container">
-      <div class="carousel">
-        <!-- Featured Book 1 -->
-        <div class="carousel-item">
-          <img src="https://dynamic.indigoimages.ca/books/9780811232432.jpg?scaleup=true&width=600&quality=85&lang=en" alt="No Longer Human" class="cover-image">
-          <div class="book-info">
-            <h3>No Longer Human - Osamu Dazai</h3>
-            <p>It tells the story of a troubled man incapable of revealing his true self to others, and who, instead, maintains a facade of hollow jocularity, later turning to a life of alcoholism and drug abuse before his final disappearance. The original title translates as "Disqualified as a human being" or "A failed human".</p>
-          </div>
-        </div>
-        <!-- Featured Book 2 -->
-        <div class="carousel-item">
-          <img src="https://cdn-amz.woka.io/images/I/71H52+sSb4L.jpg" alt="" class="cover-image">
-          <div class="book-info">
-            <h3>The Book Thief - Markus Zusak</h3>
-            <p>The Book Thief is a historical fiction novel by the Australian author Markus Zusak, set in Nazi Germany during World War II. Published in 2006, The Book Thief became an international bestseller and was translated into 63 languages and sold 17 million copies. It was adapted into the 2013 feature film, The Book Thief.</p>
-          </div>
-        </div>
-        <!-- Featured Book 3 -->
-        <div class="carousel-item">
-          <img src="https://images.penguinrandomhouse.com/cover/9780735218246" alt="">
+          <!-- Navigation Arrows -->
+          <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
+          <div class="arrow next" onclick="nextSlide()">&#10095;</div>
+
+          <script src="script.js"></script>
         </div>
       </div>
-    
-      <!-- Navigation Arrows -->
-      <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
-      <div class="arrow next" onclick="nextSlide()">&#10095;</div>
-    
-      <script src="script.js"></script>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- About Section -->
-<section class="about-section">
-  <div class="container">
-    <h2>About Little Library</h2>
-    <p>
-      Welcome...
-    </p>
-    <a href="#join-now" class="cta-button">Join Now</a>
-  </div>
-</section>
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <h2>About Little Library</h2>
+        <p>Welcome...</p>
+        <a href="#join-now" class="cta-button">Join Now</a>
+      </div>
+    </section>
 
-<!-- Footer Section -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-links">
-      <a href="#contact">Contact Us</a>
-    </div>
-    <div class="social-media-icons">
-      <!-- Your social media icons go here -->
-    </div>
-  </div>
-</footer>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-links">
+          <a href="#contact">Contact Us</a>
+        </div>
+        <div class="social-media-icons">
+          <!-- Your social media icons go here -->
+        </div>
+      </div>
+    </footer>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

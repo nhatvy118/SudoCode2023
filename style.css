@@ -13,10 +13,16 @@ body {
   display: flex;
   width: 100%;
   height : 100px;
+  justify-content: space-between;
   align-items: center;
   background: #CEDEBD;
   padding: 10px; 
 }
+
+.nav-component li {
+  margin-right: 20px; /* Adjust the spacing between navigation items */
+}
+
 
 .nav-container .logo {
   flex-grow: 1;
@@ -36,6 +42,75 @@ body {
   background-color: #0367b8;
   color: #fff!important;
   border-radius: 5px;
+}
+.browse-component.hear-dropdown {
+  margin-right: 100px;
+}
+.browse-component.hear-dropdown .dropdown-compenent ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: table;
+  width: 100%;
+}
+
+.browse-component.hear-dropdown .dropdown-compenent li {
+  display: table-row;
+}
+
+.browse-component.hear-dropdown .dropdown-compenent a {
+  display: table-cell;
+  padding: 10px; /* Adjust the padding as needed */
+  border-bottom: 0.5px solid #ccc; /* Add a border between table cells */
+  text-decoration: none; /* Remove underlines from links */
+  color: #3d3d3d;
+}
+
+.browse-component.hear-dropdown details {
+  position: relative;
+  list-style: none;
+}
+
+.browse-component.hear-dropdown .dropdown-compenent {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+.browse-component.hear-dropdown details:hover .dropdown-compenent {
+  display: block;
+}
+.search-component {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-faucet {
+  margin-right: 10px; /* Adjust the spacing between the faucet and the select */
+}
+
+.search-faucet.selector {
+  display: flex;
+  align-items: center;
+}
+
+.auth-component {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.auth-component li {
+  margin-right: 25px; /* Adjust the spacing between authentication items */
 }
 
 .carousel-container {
