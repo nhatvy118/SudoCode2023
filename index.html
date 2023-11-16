@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="nav-container">
         <div class="logo">
             <img src="./scr/logo.png" alt="Logo" width="200" height="200">
         </div>
@@ -96,39 +96,67 @@
         </div>
     </div>
 
-<!--<div class="pic-ctn">
-  <img src="https://bizweb.dktcdn.net/100/326/228/products/the-book-thief-by-markus-zusak-bookworm-hanoi-7d1a87b3-e347-4516-9d41-ae33b79c2e82.jpg?v=1622265678593" alt="" class="pic">
-  <img src="https://bibliomaniapublishing.com/wp-content/uploads/2023/08/No-Longer-Human.png" alt="" class="pic">
-  <img src="https://picsum.photos/200/300?t=3" alt="" class="pic">
-  <img src="https://picsum.photos/200/300?t=4" alt="" class="pic">
-  <img src="https://picsum.photos/200/300?t=5" alt="" class="pic">
-</div>-->
-<div class="carousel-container">
-  <div class="carousel">
-    <!-- Featured Book 1 -->
-    <div class="carousel-item">
-      <img src="https://dynamic.indigoimages.ca/books/9780811232432.jpg?scaleup=true&width=600&quality=85&lang=en" alt="No Longer Human" class="cover-image">
-      <div class="book-info">
-        <h3>No Longer Human - Osamu Dazai</h3>
-        <p>It tells the story of a troubled man incapable of revealing his true self to others, and who, instead, maintains a facade of hollow jocularity, later turning to a life of alcoholism and drug abuse before his final disappearance. The original title translates as "Disqualified as a human being" or "A failed human".</p>
+<!-- Trending Books Carousel Section -->
+<section class="trending-books">
+  <div class="container">
+    <h2>Trending Books</h2>
+    <!-- Trending books carousel -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <!-- Featured Book 1 -->
+        <div class="carousel-item">
+          <img src="https://dynamic.indigoimages.ca/books/9780811232432.jpg?scaleup=true&width=600&quality=85&lang=en" alt="No Longer Human" class="cover-image">
+          <div class="book-info">
+            <h3>No Longer Human - Osamu Dazai</h3>
+            <p>It tells the story of a troubled man incapable of revealing his true self to others, and who, instead, maintains a facade of hollow jocularity, later turning to a life of alcoholism and drug abuse before his final disappearance. The original title translates as "Disqualified as a human being" or "A failed human".</p>
+          </div>
+        </div>
+        <!-- Featured Book 2 -->
+        <div class="carousel-item">
+          <img src="https://cdn-amz.woka.io/images/I/71H52+sSb4L.jpg" alt="" class="cover-image">
+          <div class="book-info">
+            <h3>The Book Thief - Markus Zusak</h3>
+            <p>The Book Thief is a historical fiction novel by the Australian author Markus Zusak, set in Nazi Germany during World War II. Published in 2006, The Book Thief became an international bestseller and was translated into 63 languages and sold 17 million copies. It was adapted into the 2013 feature film, The Book Thief.</p>
+          </div>
+        </div>
+        <!-- Featured Book 3 -->
+        <div class="carousel-item">
+          <img src="https://images.penguinrandomhouse.com/cover/9780735218246" alt="">
+        </div>
       </div>
-    </div>
-    <!-- Featured Book 2 -->
-    <div class="carousel-item">
-      <img src="https://cdn-amz.woka.io/images/I/71H52+sSb4L.jpg" alt="">
-    </div>
-    <!-- Featured Book 3 -->
-    <div class="carousel-item">
-      <img src="https://images.penguinrandomhouse.com/cover/9780735218246" alt="">
+    
+      <!-- Navigation Arrows -->
+      <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
+      <div class="arrow next" onclick="nextSlide()">&#10095;</div>
+    
+      <script src="script.js"></script>
     </div>
   </div>
+</section>
 
-  <!-- Navigation Arrows -->
-  <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
-  <div class="arrow next" onclick="nextSlide()">&#10095;</div>
+<!-- About Section -->
+<section class="about-section">
+  <div class="container">
+    <h2>About Little Library</h2>
+    <p>
+      Welcome...
+    </p>
+    <a href="#join-now" class="cta-button">Join Now</a>
+  </div>
+</section>
 
-  <script src="script.js"></script>
-</div>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="social-media-icons">
+      <!-- Your social media icons go here -->
+    </div>
+  </div>
+</footer>
 
+<script src="script.js"></script>
 </body>
 </html>
