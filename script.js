@@ -24,3 +24,13 @@ function updateCarousel() {
   const newTransformValue = -currentSlide * 100 + '%';
   carousel.style.transform = 'translateX(' + newTransformValue + ')';
 }
+
+document.querySelector('.signup-link').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default link behavior
+  window.location.href = 'signup.html'; // Redirect to the sign-up page
+});
+
+document.querySelector('.login-link').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default link behavior
+  window.location.href = 'login.html'; // Redirect to the sign-up page
+});
