@@ -21,7 +21,7 @@ function prevSlide() {
 function updateCarousel() {
     console.log("hi");
   const carousel = document.querySelector('.carousel');
-  const newTransformValue = -currentSlide * 100 + '%';
+  const newTransformValue = -currentSlide * 115 + '%';
   carousel.style.transform = 'translateX(' + newTransformValue + ')';
 }
 
@@ -29,7 +29,7 @@ function updateCarousel() {
 
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.querySelector('.search-bar-input input');
-  const searchSelect = document.querySelector('.search-facet-value');
+  const searchSelect = document.querySelector('#search-filter');
   const searchResults = document.querySelector('.search-results');
 
   const books = [
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   function searchBooks() {
+    console.log(searchSelect)
       const searchTerm = searchInput.value.toLowerCase();
       const searchCategory = searchSelect.value.toLowerCase(); // Use the 'value' property for the select element
       const filteredBooks = filterBooks(books, searchTerm, searchCategory);
