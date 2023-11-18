@@ -8,8 +8,8 @@ body {
 .container {
   max-width: 800px;
   margin: auto;
-  padding: 10px 0;
 }
+
 .nav-container {
   display: flex;
   width: 100%;
@@ -17,12 +17,12 @@ body {
   justify-content: space-between;
   align-items: center;
   background: #CEDEBD;
-  padding: 10px; 
+  margin-right: auto;
 }
 
 
 .nav-component li {
-  margin-right: 20px; /* Adjust the spacing between navigation items */
+  margin-right: 20px; 
   list-style-type: none;
 }
 
@@ -39,16 +39,13 @@ body {
 .browse-component.hear-dropdown {
   margin-right: 100px;
 }
-.browse-component.hear-dropdown .dropdown-compenent ul {
+.browse-component.hear-dropdown .dropdown-component ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  display: table;
   width: 100%;
 }
 
-.browse-component.hear-dropdown .dropdown-compenent li {
-  display: table-row;
+.browse-component.hear-dropdown .dropdown-component li {
   list-style-type: none;
 }
 
@@ -58,27 +55,25 @@ body {
   list-style: none;
 }
 
-.browse-component.hear-dropdown details:hover .dropdown-compenent {
-  display: block;
+.browse-component.hear-dropdown details:hover .dropdown-component {
+  display: block; 
 }
 
 
-.browse-component.hear-dropdown .dropdown-compenent {
+.browse-component.hear-dropdown .dropdown-component {
   position: absolute;
-  top: 100%;
-  left: 0;
   z-index: 1;
   display: none;
   background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-.browse-component.hear-dropdown .dropdown-compenent a {
+.browse-component.hear-dropdown .dropdown-component a {
   display: block;
   width: 100%;
-  padding: 15px; /* Adjust the padding as needed */
-  border-bottom: 1px solid #eee; /* Add a border between items */
+  padding: 10px;
+  border-bottom: 1px solid #eee;
   text-decoration: none;
   color: #333;
   font-size: 16px;
@@ -87,13 +82,10 @@ body {
   text-overflow: ellipsis;
 }
 
-.browse-component.hear-dropdown .dropdown-compenent a:hover {
-  background-color: #f5f5f5; /* Add a background color on hover */
+.browse-component.hear-dropdown .dropdown-component a:hover {
+  background-color: #f5f5f5; 
 }
 
-.browse-component.hear-dropdown details:hover .dropdown-compenent {
-  display: block;
-}
 
 .search-component {
   display: flex;
@@ -116,7 +108,7 @@ body {
 .search-bar select,
 .search-bar button {
   margin: 0 5px;
-  padding: 8px;
+  padding: 7px;
   border: none;
   border-radius: 5px;
 }
@@ -129,7 +121,7 @@ body {
 }
 
 .divider {
-  margin: 0 10px;
+  margin: 0 2px;
   color: #F3B664;
 }
 
