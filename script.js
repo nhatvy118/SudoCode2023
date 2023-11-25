@@ -90,3 +90,9 @@ document.querySelector('.login-link').addEventListener('click', function(event) 
   event.preventDefault(); // Prevent the default link behavior
   window.location.href = 'login.html'; // Redirect to the sign-up page
 });
+
+//carousel function
+function redirectToBookDetail(bookId) {
+  // Redirect to the book detail page using the bookId
+  window.location.href = 'book-detail.html?id=' + bookId; 
+}

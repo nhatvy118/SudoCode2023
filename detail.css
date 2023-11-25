@@ -1,0 +1,58 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5ecd7; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  .book-details-container {
+    display: flex;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .book-cover {
+    width: 40%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .book-info {
+    padding: 20px;
+  }
+  
+  .book-title {
+    font-size: 24px;
+    color: #4e4034; 
+  }
+  
+  .book-author {
+    color: #827e7d; 
+  }
+  
+  .book-description {
+    margin-top: 10px;
+    color: #635b55; 
+  }
+  
+  .availability {
+    margin-top: 10px;
+    color: #2d5941; 
+  }
+  
+  .borrow-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #b2d1b7; 
+    color: #4e4034; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+/* review section */
+
