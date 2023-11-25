@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
   ];
 
   function searchBooks() {
-    console.log(searchSelect)
       const searchTerm = searchInput.value.toLowerCase();
       const searchCategory = searchSelect.value.toLowerCase(); // Use the 'value' property for the select element
       const filteredBooks = filterBooks(books, searchTerm, searchCategory);
