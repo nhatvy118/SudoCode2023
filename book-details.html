@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OpenLib - Book Details</title>
+    <!-- Include Bootstrap CSS and JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom Styles for Book Details Page -->
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Book Details Content -->
+    <div class="row" id="bookDetailsContainer">
+        <!-- Book details will be dynamically added here -->
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Function to get URL parameters
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+    // Fetch book details based on the ID from the URL
+    var bookId = getUrlParameter('id');
+
+    // Fetch data from the local JSON file
+    fetch('books.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Find the book with the matching ID
+            var book = data.find(book => book.id.toString() ===  bookId);
+
+            if (!book) {
+                throw new Error('Book not found');
+            }
+
+            // Update the content with the book details
+            var bookDetailsContainer = document.getElementById('bookDetailsContainer');
+            var bookDetailsHtml = `
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <img src="${book.cover}" class="card-img-top" alt="${book.title} Cover">
+                        <div class="card-body">
+                            <h2 class="card-title">${book.title}</h2>
+                            <p class="card-text">Author: ${book.author}</p>
+                            <p class="card-text">Genre: ${book.genre}</p>
+                            <p class="card-text">Description: ${book.description}</p>
+                            <p class="card-text">Availability: ${book.inStock ? 'In Stock' : 'Out of Stock'}</p>
+                            <a href="index.html" class="btn btn-secondary">Back to Browse</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            bookDetailsContainer.innerHTML = bookDetailsHtml;
+        })
+        .catch(error => {
+            console.error('Error fetching or parsing data:', error);
+        });
+});
+
+</script>
+
+</body>
+</html>
