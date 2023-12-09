@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Book Title 1",
+    "author": "Author 1",
+    "genre": "Fiction",
+    "cover": "https://knowdemia.com/wp-content/uploads/2020/07/df11af10f07bd431669defc20e99dd81.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "publishedYear": 2022
+  },
+  {
+    "title": "Book Title 2",
+    "author": "Author 2",
+    "genre": "Non-Fiction",
+    "cover": "https://knowdemia.com/wp-content/uploads/2020/07/df11af10f07bd431669defc20e99dd81.jpg",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+    "publishedYear": 2021
+  },
+  {
+    "title": "Book Title 3",
+    "author": "Author 3",
+    "genre": "Science Fiction",
+    "cover": "https://knowdemia.com/wp-content/uploads/2020/07/df11af10f07bd431669defc20e99dd81.jpg",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...",
+    "publishedYear": 2020
+  }
+]
