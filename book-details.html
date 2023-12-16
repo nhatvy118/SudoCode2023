@@ -75,8 +75,13 @@
 <div id="bookDetailsContainer"></div>
 
 <script>
-     // Function to check if the book is in the cart
-     function isBookInLocalStorage(bookId) {
+        function updateCartButton(isBookInCart) {
+            const button = document.getElementById('cartButton');
+            button.innerHTML = isBookInCart ? 'Remove from Cart' : 'Add to Cart';
+            button.className = `btn ${isBookInCart ? 'btn-danger' : 'btn-success'} borrow-button`;
+        }
+        // Function to check if the book is in the cart
+        function isBookInLocalStorage(bookId) {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             return cart.includes(bookId);
         }
@@ -85,7 +90,6 @@
         function toggleCart(bookId) {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const isBookInCart = cart.includes(bookId);
-            console.log(isBookInCart);
 
             if (isBookInCart) {
                 // Book is in the cart, remove it
@@ -98,10 +102,9 @@
                 localStorage.setItem('cart', JSON.stringify(cart));
                 showAnnouncement('Added to Cart successfully!', 'alert-success');
             }
-
-            // Refresh the page to update the button text and style
-            // location.reload();
+            updateCartButton(!isBookInCart);
         }
+        
 
         // Function to display the announcement
         function showAnnouncement(message, className) {
@@ -115,7 +118,7 @@
             // Hide the announcement after 2 seconds (adjust as needed)
             setTimeout(() => {
                 announcement.style.display = 'none';
-            }, 2000);
+            }, 1000);
         }
     
     document.addEventListener('DOMContentLoaded', function () {
@@ -166,7 +169,7 @@
                 var buttonHtml = `
                     <div class="row justify-content-between">
                         <div class="col-md-6">
-                            <button class="btn  ${isBookInCart ? 'btn-danger' : 'btn-success'} borrow-button" style="border: none;" onclick="toggleCart(${book.id})">
+                            <button id="cartButton" class="btn  ${isBookInCart ? 'btn-danger' : 'btn-success'} borrow-button" style="border: none;" onclick="toggleCart(${book.id})">
                                 ${isBookInCart ? 'Remove from Cart' : 'Add to Cart'}
                             </button>
                         </div>
