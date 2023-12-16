@@ -76,16 +76,16 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Function to get URL parameters
-        function getUrlParameter(name) {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        }
+            // Function to get URL parameters
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
 
-        // Fetch book details based on the ID from the URL
-        var bookId = getUrlParameter('id');
+            // Fetch book details based on the ID from the URL
+            var bookId = getUrlParameter('id');
 
         // Fetch data from the local JSON file
         fetch('books.json')
@@ -98,34 +98,101 @@
             .then(data => {
                 // Find the book with the matching ID
                 var book = data.find(book => book.id.toString() === bookId);
-
-                if (!book) {
-                    throw new Error('Book not found');
+        // Fetch data from the local JSON file
+        fetch('books.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
+                return response.json();
+            })
+            .then(data => {
+                // Find the book with the matching ID
+                var book = data.find(book => book.id.toString() === bookId);
+
+                    if (!book) {
+                        throw new Error('Book not found');
+                    }
 
                 // Update the content with the book details
                 var bookDetailsContainer = document.getElementById('bookDetailsContainer');
-                var bookDetailsHtml = `
-                    <div class="book-details-container">
-                        <img src="${book.cover}" class="book-cover" alt="${book.title} Cover">
-                        <div class="book-info">
-                            <h1 class="book-title">${book.title}</h1>
-                            <p class="book-author">Author: ${book.author}</p>
-                            <p class="book-description">Genre: ${book.genre}</p>
-                            <p class="book-description">Description: ${book.description}</p>
-                            <p class="availability">Availability: ${book.inStock ? 'In Stock' : 'Out of Stock'}</p>
-                            <a href="index.html" class="btn btn-secondary">Back to Browse</a>
-                        </div>    
-                        
+                var isBookInCart = isBookInLocalStorage(book.id);
 
+                var buttonHtml = `
+                    <div class="row justify-content-between">
+                        <div class="col-md-6">
+                            <a href="index.html" class="btn btn-secondary btn-block p-2" style="border: none;">Back to Browse</a>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn ${isBookInCart ? 'btn-danger' : 'btn-success'} btn-block p-2" style="border: none;" onclick="toggleCart(${book.id})">
+                                ${isBookInCart ? 'Remove from Cart' : 'Add to Cart'}
+                            </button>
+                        </div>
                     </div>
-                
-            `;
+                `;
+
+                var bookDetailsHtml = `
+                    <div class="col-md-6 offset-md-3">
+                        <div class="card">
+                            <img src="${book.cover}" class="card-img-top" alt="${book.title} Cover">
+                            <div class="card-body">
+                                <h2 class="card-title">${book.title}</h2>
+                                <p class="card-text">Author: ${book.author}</p>
+                                <p class="card-text">Genre: ${book.genre}</p>
+                                <p class="card-text">Description: ${book.description}</p>
+                                <p class="card-text">Availability: ${book.inStock ? 'In Stock' : 'Out of Stock'}</p>
+                                ${buttonHtml}
+                            </div>
+                        </div>
+                    </div>
+                `;
                 bookDetailsContainer.innerHTML = bookDetailsHtml;
             })
             .catch(error => {
                 console.error('Error fetching or parsing data:', error);
             });
+
+        // Function to check if the book is in the cart
+        function isBookInLocalStorage(bookId) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            return cart.includes(bookId);
+        }
+
+        // Function to handle adding/removing a book to/from the cart
+        function toggleCart(bookId) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const isBookInCart = cart.includes(bookId);
+
+            if (isBookInCart) {
+                // Book is in the cart, remove it
+                const updatedCart = cart.filter(id => id !== bookId);
+                localStorage.setItem('cart', JSON.stringify(updatedCart));
+                showAnnouncement('Removed from Cart successfully!', 'alert-danger');
+            } else {
+                // Book is not in the cart, add it
+                cart.push(bookId);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                showAnnouncement('Added to Cart successfully!', 'alert-success');
+            }
+
+            // Refresh the page to update the button text and style
+            location.reload();
+        }
+
+        // Function to display the announcement
+        function showAnnouncement(message, className) {
+            const announcement = document.createElement('div');
+            announcement.className = `alert ${className}`;
+            announcement.innerHTML = message;
+
+            // Insert the announcement above the book details container
+            bookDetailsContainer.insertBefore(announcement, bookDetailsContainer.firstChild);
+
+            // Hide the announcement after 2 seconds (adjust as needed)
+            setTimeout(() => {
+                announcement.style.display = 'none';
+            }, 2000);
+        }
     });
 </script>
 
