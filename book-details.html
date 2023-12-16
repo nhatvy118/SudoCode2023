@@ -75,6 +75,49 @@
 <div id="bookDetailsContainer"></div>
 
 <script>
+     // Function to check if the book is in the cart
+     function isBookInLocalStorage(bookId) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            return cart.includes(bookId);
+        }
+
+        // Function to handle adding/removing a book to/from the cart
+        function toggleCart(bookId) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const isBookInCart = cart.includes(bookId);
+            console.log(isBookInCart);
+
+            if (isBookInCart) {
+                // Book is in the cart, remove it
+                const updatedCart = cart.filter(id => id !== bookId);
+                localStorage.setItem('cart', JSON.stringify(updatedCart));
+                showAnnouncement('Removed from Cart successfully!', 'alert-danger');
+            } else {
+                // Book is not in the cart, add it
+                cart.push(bookId);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                showAnnouncement('Added to Cart successfully!', 'alert-success');
+            }
+
+            // Refresh the page to update the button text and style
+            // location.reload();
+        }
+
+        // Function to display the announcement
+        function showAnnouncement(message, className) {
+            const announcement = document.createElement('div');
+            announcement.className = `alert ${className}`;
+            announcement.innerHTML = message;
+
+            // Insert the announcement above the book details container
+            bookDetailsContainer.insertBefore(announcement, bookDetailsContainer.firstChild);
+
+            // Hide the announcement after 2 seconds (adjust as needed)
+            setTimeout(() => {
+                announcement.style.display = 'none';
+            }, 2000);
+        }
+    
     document.addEventListener('DOMContentLoaded', function () {
             // Function to get URL parameters
             function getUrlParameter(name) {
@@ -119,7 +162,7 @@
                 // Update the content with the book details
                 var bookDetailsContainer = document.getElementById('bookDetailsContainer');
                 var isBookInCart = isBookInLocalStorage(book.id);
-
+                var istoggle = false;
                 var buttonHtml = `
                     <div class="row justify-content-between">
                         <div class="col-md-6">
@@ -150,47 +193,6 @@
                 console.error('Error fetching or parsing data:', error);
             });
 
-        // Function to check if the book is in the cart
-        function isBookInLocalStorage(bookId) {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            return cart.includes(bookId);
-        }
-
-        // Function to handle adding/removing a book to/from the cart
-        function toggleCart(bookId) {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const isBookInCart = cart.includes(bookId);
-
-            if (isBookInCart) {
-                // Book is in the cart, remove it
-                const updatedCart = cart.filter(id => id !== bookId);
-                localStorage.setItem('cart', JSON.stringify(updatedCart));
-                showAnnouncement('Removed from Cart successfully!', 'alert-danger');
-            } else {
-                // Book is not in the cart, add it
-                cart.push(bookId);
-                localStorage.setItem('cart', JSON.stringify(cart));
-                showAnnouncement('Added to Cart successfully!', 'alert-success');
-            }
-
-            // Refresh the page to update the button text and style
-            location.reload();
-        }
-
-        // Function to display the announcement
-        function showAnnouncement(message, className) {
-            const announcement = document.createElement('div');
-            announcement.className = `alert ${className}`;
-            announcement.innerHTML = message;
-
-            // Insert the announcement above the book details container
-            bookDetailsContainer.insertBefore(announcement, bookDetailsContainer.firstChild);
-
-            // Hide the announcement after 2 seconds (adjust as needed)
-            setTimeout(() => {
-                announcement.style.display = 'none';
-            }, 2000);
-        }
     });
 </script>
 
