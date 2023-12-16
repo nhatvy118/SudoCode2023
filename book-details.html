@@ -97,7 +97,9 @@
             })
             .then(data => {
                 // Find the book with the matching ID
-                var book = data.find(book => book.id.toString() === bookId);
+                var book = data.find(book => book.id.toString() === bookId);})
+
+    
         // Fetch data from the local JSON file
         fetch('books.json')
             .then(response => {
@@ -121,29 +123,25 @@
                 var buttonHtml = `
                     <div class="row justify-content-between">
                         <div class="col-md-6">
-                            <a href="index.html" class="btn btn-secondary btn-block p-2" style="border: none;">Back to Browse</a>
-                        </div>
-                        <div class="col-md-6">
-                            <button class="btn ${isBookInCart ? 'btn-danger' : 'btn-success'} btn-block p-2" style="border: none;" onclick="toggleCart(${book.id})">
+                            <button class="btn  ${isBookInCart ? 'btn-danger' : 'btn-success'} borrow-button" style="border: none;" onclick="toggleCart(${book.id})">
                                 ${isBookInCart ? 'Remove from Cart' : 'Add to Cart'}
                             </button>
                         </div>
                     </div>
                 `;
-
                 var bookDetailsHtml = `
-                    <div class="col-md-6 offset-md-3">
-                        <div class="card">
-                            <img src="${book.cover}" class="card-img-top" alt="${book.title} Cover">
-                            <div class="card-body">
-                                <h2 class="card-title">${book.title}</h2>
-                                <p class="card-text">Author: ${book.author}</p>
-                                <p class="card-text">Genre: ${book.genre}</p>
-                                <p class="card-text">Description: ${book.description}</p>
-                                <p class="card-text">Availability: ${book.inStock ? 'In Stock' : 'Out of Stock'}</p>
-                                ${buttonHtml}
-                            </div>
-                        </div>
+                    <div class="book-details-container">
+                        <img src="${book.cover}" class="book-cover" alt="${book.title} Cover">
+                        <div class="book-info">
+                            <h1 class="book-title">${book.title}</h1>
+                            <p class="book-author">Author: ${book.author}</p>
+                            <p class="book-description">Genre: ${book.genre}</p>
+                            <p class="book-description">Description: ${book.description}</p>
+                            <p class="availability">Availability: ${book.inStock ? 'In Stock' : 'Out of Stock'}</p>
+                            ${buttonHtml}
+                        </div>    
+                        
+
                     </div>
                 `;
                 bookDetailsContainer.innerHTML = bookDetailsHtml;
