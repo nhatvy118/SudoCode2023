@@ -3,30 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>OpenLib - Olive Green Theme</title>
-    <!-- Include Bootstrap CSS and JS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom Styles for Olive Green Theme -->
-    <style>
-        /* Custom styles as before... */
-        #viewCartButton {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-        }
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-        #announcement {
-            position: fixed;
-            top: 60px;
-            right: 20px;
-            display: none;
-            padding: 10px;
-            background-color: #28a745;
-            color: #fff;
-        }
+    <title>OpenLib - Cottage Core Theme</title>
+    <!-- Custom Styles for Cottage Core Theme -->
+    <style>
+        /* Custom Styles for Cottage Core Theme */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5ecd7;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.search-bar {
+    background-color: #d4c8b7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.search-bar input,
+.search-bar select,
+.search-bar button {
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.book-card {
+    display: inline-block; /* Change from "block" to "inline-block" */
+    margin-right: 20px; /* Adjust margin as needed */
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-card:last-child {
+    margin-right: 0; /* Remove right margin for the last book in the row */
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-card .card {
+    border: none;
+    background-color: #fff7eb;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-card .card-img-top {
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.book-card .card-body {
+    padding: 20px;
+}
+
+.book-card .card-title {
+    font-size: 20px;
+    color: #4e4034;
+}
+
+.book-card .card-text {
+    color: #827e7d;
+}
+
+.book-card .btn-success {
+    background-color: #b2d1b7;
+    color: #4e4034;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-card .btn-primary {
+    background-color: #a9c3a8;
+    color: #4e4034;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#viewCartButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2d5941;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#announcement {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    display: none;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+}
+
     </style>
 </head>
 <body>
@@ -71,18 +158,25 @@
 
             data.forEach(book => {
                 const card = document.createElement('div');
-                card.className = 'col-md-4 mb-4 book-card';
+                card.className = 'col-md-3 mb-4 book-card'; // Set to col-md-3 to display 4 books per row
 
                 card.innerHTML = `
                     <div class="card">
                         <img src="${book.cover}" class="card-img-top" alt="${book.title} Cover">
                         <div class="card-body">
                             <h5 class="card-title">${book.title}</h5>
-                            <p class="card-text">Author: ${book.author}</p>
-                            <p class="card-text">Genre: ${book.genre}</p>
-                            <p class="card-text">Year: ${book.publishedYear}</p>
-                            <button class="btn btn-success" onclick="addToCart(${book.id})">Add to Cart</button>
-                            <a href="book-details.html?id=${book.id}" class="btn btn-primary ml-2">View Details</a>
+                            <p class="card-text mb-0">Author: ${book.author}</p>
+                            <p class="card-text ">Genre: ${book.genre}</p>
+                            <!-- Add to Cart button -->
+                            <button class="btn btn-success" onclick="addToCart(${book.id})">
+                                <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
+                            </button>
+
+                            <!-- View Details button -->
+                            <a href="book-details.html?id=${book.id}" class="btn btn-primary ml-2">
+                                <i class="fas fa-info-circle"></i> <!-- Font Awesome info circle icon -->
+                            </a>
+
                         </div>
                     </div>
                 `;
