@@ -117,23 +117,16 @@
 
     // Function to handle removing a book from the cart
     function removeFromCart(bookId) {
-        // Implement your logic to remove the book from the cart
-        // You can use JavaScript to interact with your backend or local storage
-
-        // For simplicity, let's update the local storage
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         cart = cart.filter(id => id !== bookId);
         localStorage.setItem('cart', JSON.stringify(cart));
 
-        // Reload the page to reflect the changes
         location.reload();
     }
 
     // Confirm Button Event
     const confirmButton = document.getElementById('confirmButton');
     confirmButton.addEventListener('click', function () {
-        // Implement your logic to handle the confirmation
-        // This could involve sending the selected items to the server, etc.
         alert('Wishlist Confirmed!');
     });
 </script>

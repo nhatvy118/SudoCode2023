@@ -1,29 +1,194 @@
 [
-  {
-    "title": "Book Title 1",
-    "author": "Author 1",
-    "genre": "Fiction",
-    "id" : 1,
-    "cover": "https://knowdemia.com/wp-content/uploads/2020/07/df11af10f07bd431669defc20e99dd81.jpg",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    "publishedYear": 2022
-  },
-  {
-    "title": "Book Title 2",
-    "author": "Author 2",
-    "genre": "Non-Fiction",
-    "id" : 2,
-    "cover": "https://knowdemia.com/wp-content/uploads/2020/07/df11af10f07bd431669defc20e99dd81.jpg",
-    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
-    "publishedYear": 2021
-  },
-  {
-    "title": "Book Title 3",
-    "author": "Author 3",
-    "genre": "Science Fiction",
-    "id" : 3,
-    "cover": "https://knowdemia.com/wp-content/uploads/2020/07/df11af10f07bd431669defc20e99dd81.jpg",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...",
-    "publishedYear": 2020
-  }
+
+    {
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Classic",
+      "id": 1,
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg",
+      "description": "The Great Gatsby is a novel written by American author F. Scott Fitzgerald...",
+      "publishedYear": 1925
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Fiction",
+      "id": 2,
+      "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690i/2657.jpg",
+      "description": "To Kill a Mockingbird is a novel by the American author Harper Lee...",
+      "publishedYear": 1960
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "id": 3,
+      "cover": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/71rpa1-kyvL._AC_UF1000,1000_QL80_.jpg",
+      "description": "Nineteen Eighty-Four is a dystopian novel and cautionary tale by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime.",
+      "publishedYear": 1949
+    },
+    {
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Romance",
+      "id": 4,
+      "cover": "https://m.media-amazon.com/images/I/71Q1tPupKjL._AC_UF1000,1000_QL80_.jpg",
+      "description": "Pride and Prejudice follows the turbulent relationship between Elizabeth Bennet, the daughter of a country gentleman, and Fitzwilliam Darcy, a rich aristocratic landowner. They must overcome the titular sins of pride and prejudice in order to fall in love and marry.",
+      "publishedYear": 1813
+    },
+    {
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genre": "Coming of Age",
+      "id": 5,
+      "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1398034300i/5107.jpg",
+      "description": "The Catcher in the Rye is a novel by American author J. D. Salinger that was partially published in serial form 1945–46 before being novelized in 1951. Originally intended for adults, it is often read by adolescents for its themes of angst and alienation, and as a critique of superficiality in society.",
+      "publishedYear": 1951
+    },
+    {
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "genre": "Adventure",
+      "id": 6,
+      "cover": "https://upload.wikimedia.org/wikipedia/vi/8/85/Moby_Dick-C%C3%A1_voi_tr%E1%BA%AFng_%28s%C3%A1ch%29.jpg",
+      "description": "Moby-Dick; or, The Whale is an 1851 novel by American writer Herman Melville. The book is the sailor Ishmael's narrative of the maniacal quest of Ahab, captain of the whaling ship Pequod, for vengeance against Moby Dick, the giant white sperm whale that bit off his leg on the ship's previous voyage.",
+      "publishedYear": 1851
+    },
+    {
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "genre": "Gothic",
+      "id": 7,
+      "cover": "https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/janeeyre01.jpg?v=1696324081300",
+      "description": "Jane Eyre: The novel's narrator and protagonist. Orphaned as a baby, Jane struggles through her nearly loveless childhood and becomes a governess at Thornfield Hall. Small and facially plain, Jane is passionate and strongly principled and values freedom and independence.",
+      "publishedYear": 1847
+    },
+    {
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "id": 8,
+      "cover": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg",
+      "description": "The Hobbit, or There and Back Again is a fantasy novel by J.R.R. Tolkien...",
+      "publishedYear": 1937
+    },
+    {
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "id": 9,
+      "cover": "https://cdn0.fahasa.com/media/catalog/product/9/7/9780261103252.jpg",
+      "description": "The Lord of the Rings is an epic high-fantasy novel...",
+      "publishedYear": 1954
+    },
+    {
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "genre": "Science Fiction",
+      "id": 10,
+      "cover": "https://upload.wikimedia.org/wikipedia/en/6/62/BraveNewWorld_FirstEdition.jpg",
+      "description": "Brave New World is a dystopian social science fiction novel...",
+      "publishedYear": 1932
+    },
+    {
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "genre": "Dystopian",
+      "id": 11,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/51k0Bn9X9NL.jpg",
+      "description": "Fahrenheit 451 is a dystopian novel by Ray Bradbury...",
+      "publishedYear": 1953
+    },
+    {
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "genre": "Gothic",
+      "id": 15,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "The Picture of Dorian Gray is a Gothic and philosophical novel...",
+      "publishedYear": 1890
+    },
+    {
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel García Márquez",
+      "genre": "Magic Realism",
+      "id": 16,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "One Hundred Years of Solitude is a landmark 1967 novel...",
+      "publishedYear": 1967
+    },
+    {
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "genre": "Psychological Thriller",
+      "id": 17,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "Crime and Punishment is a novel by Fyodor Dostoevsky...",
+      "publishedYear": 1866
+    },
+    {
+      "title": "The Brothers Karamazov",
+      "author": "Fyodor Dostoevsky",
+      "genre": "Philosophical Fiction",
+      "id": 18,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "The Brothers Karamazov is a novel by Fyodor Dostoevsky...",
+      "publishedYear": 1880
+    },
+    {
+      "title": "Anna Karenina",
+      "author": "Leo Tolstoy",
+      "genre": "Realist Novel",
+      "id": 19,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "Anna Karenina is a novel by Leo Tolstoy...",
+      "publishedYear": 1877
+    },
+    {
+      "title": "The Grapes of Wrath",
+      "author": "John Steinbeck",
+      "genre": "Realist Novel",
+      "id": 20,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "The Grapes of Wrath is an American realist novel...",
+      "publishedYear": 1939
+    },
+    {
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "genre": "Adventure",
+      "id": 21,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "The Count of Monte Cristo is an adventure novel...",
+      "publishedYear": 1844
+    },
+    {
+      "title": "Don Quixote",
+      "author": "Miguel de Cervantes",
+      "genre": "Satire",
+      "id": 22,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "Don Quixote is a Spanish novel by Miguel de Cervantes...",
+      "publishedYear": 1605
+    },
+    {
+      "title": "The Scarlet Letter",
+      "author": "Nathaniel Hawthorne",
+      "genre": "Historical Fiction",
+      "id": 23,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "The Scarlet Letter is a historical fiction novel...",
+      "publishedYear": 1850
+    },
+    {
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "genre": "Gothic",
+      "id": 24,
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "description": "Frankenstein; or, The Modern Prometheus is a novel...",
+      "publishedYear": 1818
+    }
+    
+  
 ]
