@@ -95,7 +95,7 @@
       "author": "Ray Bradbury",
       "genre": "Dystopian",
       "id": 11,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/51k0Bn9X9NL.jpg",
+      "cover": "https://cdn.waterstones.com/bookjackets/large/9780/0065/9780006546061.jpg",
       "description": "Fahrenheit 451 is a dystopian novel by Ray Bradbury...",
       "publishedYear": 1953
     },
@@ -131,7 +131,7 @@
       "author": "Oscar Wilde",
       "genre": "Gothic",
       "id": 15,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "cover": "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/51gW6TCJUPL.jpg",
       "description": "The Picture of Dorian Gray is a Gothic and philosophical novel...",
       "publishedYear": 1890
     },
@@ -140,7 +140,7 @@
       "author": "Gabriel García Márquez",
       "genre": "Magic Realism",
       "id": 16,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "cover": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81MI6+TpYkL._AC_UF1000,1000_QL80_.jpg",
       "description": "One Hundred Years of Solitude is a landmark 1967 novel...",
       "publishedYear": 1967
     },
@@ -149,7 +149,7 @@
       "author": "Fyodor Dostoevsky",
       "genre": "Psychological Thriller",
       "id": 17,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "cover": "https://interactive.wttw.com/sites/default/files/crime-and-punishment@2x.jpg",
       "description": "Crime and Punishment is a novel by Fyodor Dostoevsky...",
       "publishedYear": 1866
     },
@@ -158,7 +158,7 @@
       "author": "Fyodor Dostoevsky",
       "genre": "Philosophical Fiction",
       "id": 18,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "cover": "https://m.media-amazon.com/images/I/917QNDtEGML._AC_UF894,1000_QL80_.jpg",
       "description": "The Brothers Karamazov is a novel by Fyodor Dostoevsky...",
       "publishedYear": 1880
     },
@@ -167,7 +167,7 @@
       "author": "Leo Tolstoy",
       "genre": "Realist Novel",
       "id": 19,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "cover": "https://images.penguinrandomhouse.com/cover/9780679783305",
       "description": "Anna Karenina is a novel by Leo Tolstoy...",
       "publishedYear": 1877
     },
@@ -176,7 +176,7 @@
       "author": "John Steinbeck",
       "genre": "Realist Novel",
       "id": 20,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/a/ad/The_Grapes_of_Wrath_%281939_1st_ed_cover%29.jpg",
       "description": "The Grapes of Wrath is an American realist novel...",
       "publishedYear": 1939
     },
@@ -185,7 +185,7 @@
       "author": "Alexandre Dumas",
       "genre": "Adventure",
       "id": 21,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "cover": "https://mpd-biblio-covers.imgix.net/9781429990134.jpg",
       "description": "The Count of Monte Cristo is an adventure novel...",
       "publishedYear": 1844
     },
@@ -194,7 +194,7 @@
       "author": "Miguel de Cervantes",
       "genre": "Satire",
       "id": 22,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "cover": "https://bizweb.dktcdn.net/thumb/1024x1024/100/363/455/products/donquixotetap1.jpg?v=1696406930487",
       "description": "Don Quixote is a Spanish novel by Miguel de Cervantes...",
       "publishedYear": 1605
     },
@@ -203,19 +203,9 @@
       "author": "Nathaniel Hawthorne",
       "genre": "Historical Fiction",
       "id": 23,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
+      "cover": "https://images.squarespace-cdn.com/content/v1/5d40204073334a0001f2f066/1583680936468-PVZ39CKJTO17UILI3Y8Q/9780451531353.jpg",
       "description": "The Scarlet Letter is a historical fiction novel...",
       "publishedYear": 1850
-    },
-    {
-      "title": "Frankenstein",
-      "author": "Mary Shelley",
-      "genre": "Gothic",
-      "id": 24,
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/41HcmisDhQL.jpg",
-      "description": "Frankenstein; or, The Modern Prometheus is a novel...",
-      "publishedYear": 1818
-    }
-    
+    }  
   
 ]
