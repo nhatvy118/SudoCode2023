@@ -1,0 +1,103 @@
+<div class="nav-container">
+    <div class="logo" id="logo">
+        <img src="./scr/logo.png" alt="Logo" width="180" height="180" />
+      </div>
+      
+    <ul class="nav-component">
+      <li>
+        <div class="browse-component hear-dropdown">
+          <details>
+            <summary>
+              Browse
+            </summary>
+            <div class="dropdown-component">
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="/subjects" data-ol-link-track="MainNav|Subjects">
+                    Subjects
+                  </a>
+                </li>
+                <li>
+                  <a href="/trending" data-ol-link-track="MainNav|Trending">
+                    Trending
+                  </a>
+                </li>
+                <li>
+                  <a href="/explore" data-ol-link-track="MainNav|Explore">
+                    Library Explorer
+                  </a>
+                </li>
+                <li>
+                  <a href="/lists" data-ol-link-track="MainNav|Lists">
+                    Lists
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/collections"
+                    data-ol-link-track="MainNav|Collections"
+                  >
+                    Collections
+                  </a>
+                </li>
+                <li>
+                  <a href="/k-12" data-ol-link-track="MainNav|K12Library">
+                    K-12 Student Library
+                  </a>
+                </li>
+                <li>
+                  <a href="/random" data-ol-link-track="MainNav|RandomBook">
+                    Random Book
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </li>
+    </ul>
+    <div class="search-component">
+      <div class="search-bar-component">
+        <div class="search-bar">
+          <div class="search-faucet">
+            <label class="search-faucet selector">
+              <span aria-hidden="true" class="search-facet-value"></span>
+              <select aria-label="Search by" id="search-filter">
+                <option value="all">All</option>
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="text">Text</option>
+                <option value="subject">Subject</option>
+                <option value="lists">Lists</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </label>
+          </div>
+          <form
+            class="search-bar-input in-collapsible-mode"
+            action=""
+            method="get"
+          >
+            <input
+              type="text"
+              name="q"
+              placeholder="Search"
+              aria-label="Search"
+              autocomplete="off"
+            />
+          </form>
+          <div class="search-dropdown">
+            <ul class="search-results"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user-options">
+        <a href="login.html" class="button login-link">Login</a> 
+        <a href="sign-up.html" class="button signup-link">Sign Up</a>
+        <a href="#" class="button profile-link" style="display: none;">Profile</a>
+      </div>
+      
+      
+
+  </div>

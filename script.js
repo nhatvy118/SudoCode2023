@@ -1,31 +1,3 @@
-let currentSlide = 0;
-
-function nextSlide() {
-  if (currentSlide < 2) {
-    currentSlide++;
-  } else {
-    currentSlide = 0;
-  }
-  updateCarousel();
-}
-
-function prevSlide() {
-  if (currentSlide > 0) {
-    currentSlide--;
-  } else {
-    currentSlide = 2;
-  }
-  updateCarousel();
-}
-
-function updateCarousel() {
-    console.log("hi");
-  const carousel = document.querySelector('.carousel');
-  const newTransformValue = -currentSlide * 115 + '%';
-  carousel.style.transform = 'translateX(' + newTransformValue + ')';
-}
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.querySelector('.search-bar-input input');
@@ -83,16 +55,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.querySelector('.signup-link').addEventListener('click', function(event) {
   event.preventDefault(); // Prevent the default link behavior
-  window.location.href = 'signup.html'; // Redirect to the sign-up page
+  window.location.href = 'sign-up.html'; 
 });
 
 document.querySelector('.login-link').addEventListener('click', function(event) {
   event.preventDefault(); // Prevent the default link behavior
-  window.location.href = 'login.html'; // Redirect to the sign-up page
+  window.location.href = 'login.html'; 
 });
 
-//carousel function
-function redirectToBookDetail(bookId) {
-  // Redirect to the book detail page using the bookId
-  window.location.href = 'book-detail.html?id=' + bookId; 
+document.querySelector('.browse-link').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default link behavior
+  window.location.href = 'book-list.html'; 
+});
+
+
+
+
+// Function to load the navbar dynamically
+function loadNavbar() {
+  // Create an XMLHttpRequest object
+  var xhttp = new XMLHttpRequest();
+
+  // Define the function to execute when the response is ready
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      // Insert the navbar content into the specified container
+      document.getElementById("navbarContainer").innerHTML = this.responseText;
+    }
+  };
+
+  // Open a GET request to the navbar.html file
+  xhttp.open("GET", "navbar.html", true);
+
+  // Send the request
+  xhttp.send();
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const logo = document.getElementById('logo');
+  const profileLink = document.querySelector('.profile-link');
+  const loginLink = document.querySelector('.login-link');
+  const signupLink = document.querySelector('.signup-link');
+  
+  // Function to handle logo click (return to homepage)
+  logo.addEventListener('click', function () {
+      window.location.href = "/index.html"; 
+  });
+  
+  // Function to handle successful login
+  function handleLoginSuccess() {
+      loginLink.style.display = 'none';
+      signupLink.style.display = 'none';
+      profileLink.style.display = 'inline-block';
+  }
+  
+  // Example: Simulate a successful login after 2 seconds (replace this with your actual login logic)
+  setTimeout(() => {
+      handleLoginSuccess();
+  }, 2000);
+  });

@@ -5,109 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Little Library</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="carousel-functions.js"></script>
   </head>
   <body>
-    <div class="nav-container">
-      <div class="logo">
-        <img src="./scr/logo.png" alt="Logo" width="200" height="200" />
-      </div>
-      <ul class="nav-component">
-        <li>
-          <div class="browse-component hear-dropdown">
-            <details>
-              <summary>
-                Browse
-              </summary>
-              <div class="dropdown-component">
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="/subjects" data-ol-link-track="MainNav|Subjects">
-                      Subjects
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/trending" data-ol-link-track="MainNav|Trending">
-                      Trending
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/explore" data-ol-link-track="MainNav|Explore">
-                      Library Explorer
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/lists" data-ol-link-track="MainNav|Lists">
-                      Lists
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/collections"
-                      data-ol-link-track="MainNav|Collections"
-                    >
-                      Collections
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/k-12" data-ol-link-track="MainNav|K12Library">
-                      K-12 Student Library
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/random" data-ol-link-track="MainNav|RandomBook">
-                      Random Book
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </details>
-          </div>
-        </li>
-      </ul>
-      <div class="search-component">
-        <div class="search-bar-component">
-          <div class="search-bar">
-            <div class="search-faucet">
-              <label class="search-faucet selector">
-                <span aria-hidden="true" class="search-facet-value"></span>
-                <select aria-label="Search by" id="search-filter">
-                  <option value="all">All</option>
-                  <option value="title">Title</option>
-                  <option value="author">Author</option>
-                  <option value="text">Text</option>
-                  <option value="subject">Subject</option>
-                  <option value="lists">Lists</option>
-                  <option value="advanced">Advanced</option>
-                </select>
-              </label>
-            </div>
-            <form
-              class="search-bar-input in-collapsible-mode"
-              action=""
-              method="get"
-            >
-              <input
-                type="text"
-                name="q"
-                placeholder="Search"
-                aria-label="Search"
-                autocomplete="off"
-              />
-            </form>
-            <div class="search-dropdown">
-              <ul class="search-results"></ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="user-options">
-        <a href="login.html" class="button login-link">Login</a> 
-        <a href="sign-up.html" class="button signup-link">Sign Up</a>
-      </div>
-        
-
-    </div>
-
+    <div id="navbarContainer"></div>
+    <script> loadNavbar();
+    </script>
     <!-- Trending Books Carousel Section -->
     <section class="trending-books">
       <h2>Trending Books</h2>
@@ -115,69 +19,18 @@
         <!-- Trending books carousel -->
         <div class="carousel-container">
           <div class="carousel" id="trendingCarousel">
-            <!-- Featured Books will be dynamically added here -->
           </div>
 
           <!-- Navigation Arrows -->
           <div class="arrow prev" onclick="prevSlide()">&#10094;</div>
           <div class="arrow next" onclick="nextSlide()">&#10095;</div>
 
-          <script src="script.js"></script>
+          
         </div>
       </div>
     </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  // Function to fetch book details from the JSON file
-  function fetchBookDetails(bookId) {
-    return fetch('books.json')
-      .then(response => response.json())
-      .then(data => {
-        return data.find(book => book.id === bookId);
-      });
-  }
 
-  // Function to add a carousel item for a book
-  function addCarouselItem(book) {
-    const trendingCarousel = document.getElementById('trendingCarousel');
-    const carouselItem = document.createElement('div');
-    carouselItem.className = 'carousel-item';
-    carouselItem.onclick = function () {
-      redirectToBookDetail(book.id);
-    };
-
-    carouselItem.innerHTML = `
-      <img src="${book.cover}" alt="${book.title}" class="cover-image" />
-      <div class="book-info">
-        <h3>${book.title} - ${book.author}</h3>
-        <p>${book.description}</p>
-      </div>
-    `;
-
-    trendingCarousel.appendChild(carouselItem);
-  }
-
-  // Function to display trending books
-  function displayTrendingBooks(bookIds) {
-    bookIds.forEach(bookId => {
-      fetchBookDetails(bookId)
-        .then(book => {
-          addCarouselItem(book);
-        })
-        .catch(error => {
-          console.error('Error fetching book details:', error);
-        });
-    });
-  }
-
-  // Trending book IDs
-  const trendingBookIds = [12, 13, 14];
-
-  // Display trending books
-  displayTrendingBooks(trendingBookIds);
-});
-</script>
 
 
     <!-- About Section -->
@@ -185,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <h2>About Little Library</h2>
       <div class="container">
         <p>Welcome...</p>
-        <a href="sign-up.html" class="signup-link cta-button">Join Now</a>
+        <a href="book-list.html" class="browse-link cta-button">Browse Books</a>
       </div>
     </section>
 

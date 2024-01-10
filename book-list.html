@@ -115,33 +115,35 @@ body {
     </style>
 </head>
 <body>
+    <div id="navbarContainer"></div>
+    <script> loadNavbar();
+    </script>
+    <div class="container">
+        <!-- Search Bar with Filters -->
+        <div class="row mb-4 search-bar">
+            <div class="col-md-8">
+                <input type="text" class="form-control" placeholder="Search by title, author, genre, or keyword">
+            </div>
+            <div class="col-md-2">
+                <select class="form-control">
+                    <option value="">All Genres</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary btn-block">Search</button>
+            </div>
+        </div>
 
-<div class="container">
-    <!-- Search Bar with Filters -->
-    <div class="row mb-4 search-bar">
-        <div class="col-md-8">
-            <input type="text" class="form-control" placeholder="Search by title, author, genre, or keyword">
+        <!-- List of Books with Basic Details -->
+        <div class="row" id="bookListContainer">
+            <!-- Books will be dynamically added here -->
         </div>
-        <div class="col-md-2">
-            <select class="form-control">
-                <option value="">All Genres</option>
-                <option value="fiction">Fiction</option>
-                <option value="non-fiction">Non-Fiction</option>
-            </select>
-        </div>
-        <div class="col-md-2">
-            <button class="btn btn-primary btn-block">Search</button>
-        </div>
+
+        <!-- Announcement for successful addition to cart -->
+        <div id="announcement">Book added to cart successfully!</div>
     </div>
-
-    <!-- List of Books with Basic Details -->
-    <div class="row" id="bookListContainer">
-        <!-- Books will be dynamically added here -->
-    </div>
-
-    <!-- Announcement for successful addition to cart -->
-    <div id="announcement">Book added to cart successfully!</div>
-</div>
 
 <!-- View Cart Button -->
 <button id="viewCartButton" class="btn btn-info" onclick="viewCart()">View Cart</button>

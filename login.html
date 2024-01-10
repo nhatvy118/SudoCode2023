@@ -4,23 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Little Library - Login</title>
-  <link rel="stylesheet" href="signup.css">
+  <link rel="stylesheet" href="sign-up.css">
+  <script src="script.js"></script>
 </head>
 <body>
 
 <!-- Sign Up Form -->
 <div class="signup-container">
   <h1>Login to Little Library</h1>
-  <form action="#" method="post">
+  <form id="loginForm" action="#" method="post">
     <label for="username">Username</label>
     <input type="text" id="username" name="username" required>
     <label for="password">Password</label>
     <input type="password" id="password" name="password" required>
-    <button type="submit">Login</button>
+    <button type="button" onclick="simulateLogin()">Login</button>
   </form>
 </div>
 
-<script src="script.js"></script>
+<script>
+  function simulateLogin() {
+    // For demonstration, consider any input as a successful login
+    const loginForm = document.getElementById('loginForm');
+    loginForm.reset(); // Clear form fields
+
+    // Simulate a successful login by updating the navigation bar
+    const profileLink = parent.document.querySelector('.profile-link');
+    const loginLink = parent.document.querySelector('.login-link');
+    const signupLink = parent.document.querySelector('.signup-link');
+
+    loginLink.style.display = 'none';
+    signupLink.style.display = 'none';
+    profileLink.style.display = 'inline-block';
+
+    // Redirect to the home page after successful login
+    window.location.href = "index.html";
+  }
+</script>
 
 </body>
 </html>
