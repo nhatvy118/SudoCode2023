@@ -100,6 +100,33 @@
       "publishedYear": 1953
     },
     {
+      "title": "No Longer Human",
+      "author": "Osamu Dazai",
+      "genre": "Japanese Literature",
+      "id": 12,
+      "cover": "https://dynamic.indigoimages.ca/books/9780811232432.jpg?scaleup=true&width=600&quality=85&lang=en",
+      "description": "It tells the story of a troubled man incapable of revealing his true self to others, and who, instead, maintains a facade of hollow jocularity, later turning to a life of alcoholism and drug abuse before his final disappearance. The original title translates as \"Disqualified as a human being\" or \"A failed human\".",
+      "publishedYear": 1948
+    },
+    {
+      "title": "The Book Thief",
+      "author": "Markus Zusak",
+      "genre": "Historical Fiction",
+      "id": 13,
+      "cover": "https://cdn-amz.woka.io/images/I/71H52+sSb4L.jpg",
+      "description": "The Book Thief is a historical fiction novel by the Australian author Markus Zusak, set in Nazi Germany during World War II. Published in 2006, The Book Thief became an international bestseller and was translated into 63 languages and sold 17 million copies. It was adapted into the 2013 feature film, The Book Thief.",
+      "publishedYear": 2005
+    },
+    {
+      "title": "A Thousand Splendid Suns",
+      "author": "Khaled Hosseini",
+      "genre": "Fiction",
+      "id": 14,
+      "cover": "https://images.penguinrandomhouse.com/cover/9780735218246",
+      "description": "A Thousand Splendid Suns tells the story of two women who both end up marrying the same man against their will and the deep friendship that the two of them form as a result of their experiences.",
+      "publishedYear": 2020
+    },
+    {
       "title": "The Picture of Dorian Gray",
       "author": "Oscar Wilde",
       "genre": "Gothic",
